@@ -13,6 +13,6 @@
       - HashSet
       - TreeSet
 
-* HashMap is used for persisting values in the form of key-value pairs.
+* HashMap is used for persisting group of objects in the form of key-value pairs.
   - Duplicate Keys are not allowed
   - Sort Order is not preserved

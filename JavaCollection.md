@@ -12,3 +12,7 @@
     - How it can be implemented
       - HashSet
       - TreeSet
+
+* HashMap is used for persisting values in the form of key-value pairs.
+  - Duplicate Keys are not allowed
+  - Sort Order is not preserved

@@ -7,3 +7,8 @@
     - LinkedList
     - Vector 
        -> Stack
+       
+ * Set is when insertion order is not maintained and duplicate entries are not allowed
+    - How it can be implemented
+      - HashSet
+      - TreeSet

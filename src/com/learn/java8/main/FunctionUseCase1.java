@@ -14,6 +14,10 @@ public class FunctionUseCase1 {
 		Function<String, Integer> fLength = str->str.length();		
 		Integer length = fLength.apply(anyString);
 		System.out.println("The length of entered String is: " + length);		
+		
+		Function<Integer, Integer> fSquare = num->num * num;	
+		
+		System.out.println(fSquare.apply(100));
 
 	}
 

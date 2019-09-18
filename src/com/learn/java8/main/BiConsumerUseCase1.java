@@ -10,12 +10,15 @@ public class BiConsumerUseCase1 {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter First String");
 		String var1 = scanner.next();
-		
+
 		System.out.println("Enter Second String");
 		String var2 = scanner.next();
-		
-		BiConsumer<String, String> biCons = (val1, val2) -> { System.out.println(val1.concat(" ").concat(val2)); };
-		
+		scanner.close();
+
+		BiConsumer<String, String> biCons = (val1, val2) -> {
+			System.out.println(val1.concat(" ").concat(val2));
+		};
+
 		biCons.accept(var1, var2);
 
 	}

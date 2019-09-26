@@ -1,6 +1,7 @@
 package com.learn.java8.main;
 
 import java.util.function.BinaryOperator;
+import java.util.function.IntBinaryOperator;
 
 public class BinaryOpUseCase1 {
 
@@ -10,6 +11,10 @@ public class BinaryOpUseCase1 {
 		BinaryOperator<String> bConc = (str1, str2) -> str1 + str2;
 		
 		System.out.println("Concatenated Name: " + bConc.apply("Abhijeet", " Kulshreshtha"));
+		
+		// IntBinaryOperator interface is the primitive version of Binary Operator
+		IntBinaryOperator inBin = (val1, val2) -> val1 + val2;		
+		System.out.println("Sum is: " + inBin.applyAsInt(20, 30));
 
 	}
 

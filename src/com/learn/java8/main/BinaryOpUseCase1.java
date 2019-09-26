@@ -13,6 +13,8 @@ public class BinaryOpUseCase1 {
 		System.out.println("Concatenated Name: " + bConc.apply("Abhijeet", " Kulshreshtha"));
 		
 		// IntBinaryOperator interface is the primitive version of Binary Operator
+		// LongBinaryOperator interface for long values
+		// DoubleBinaryOperator interfaces for Double Values
 		IntBinaryOperator inBin = (val1, val2) -> val1 + val2;		
 		System.out.println("Sum is: " + inBin.applyAsInt(20, 30));
 

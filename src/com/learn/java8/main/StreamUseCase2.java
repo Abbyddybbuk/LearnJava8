@@ -39,6 +39,9 @@ public class StreamUseCase2 {
 		List<Integer> sortedDescList = numList.stream().sorted((elm1, elm2) -> elm2.compareTo(elm1))
 				.collect(Collectors.toList());
 		System.out.println("Sorted List in Descending Order " + sortedDescList);
+		
+		Integer minValue = sortedNumList.stream().min((num1, num2) -> num1.compareTo(num2)).get();
+		System.out.println("Min Value is: " + minValue);
 
 	}
 

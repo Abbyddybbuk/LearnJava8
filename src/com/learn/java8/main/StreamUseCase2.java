@@ -40,9 +40,20 @@ public class StreamUseCase2 {
 				.collect(Collectors.toList());
 		System.out.println("Sorted List in Descending Order " + sortedDescList);
 		
+		// Get Minimum Value
 		Integer minValue = sortedNumList.stream().min((num1, num2) -> num1.compareTo(num2)).get();
 		System.out.println("Min Value is: " + minValue);
-
+		
+		//Get Maximum Value
+		Integer maxValue = sortedNumList.stream().max((num1, num2) -> num1.compareTo(num2)).get();
+		System.out.println("Max Value is: " + maxValue);
+		
+		//For Each Usage
+		System.out.println("Streams forEach() method usage: with Lambda expression");
+		nameList.stream().forEach(name -> System.out.println(name));
+		
+		System.out.println("Streams forEach() method usage: with :: operator");
+		nameList.stream().forEach(System.out::println);
 	}
 
 }

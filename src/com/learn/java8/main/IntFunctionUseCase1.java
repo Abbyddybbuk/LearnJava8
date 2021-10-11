@@ -5,6 +5,8 @@ import java.util.function.IntToDoubleFunction;
 import java.util.function.ToIntFunction;
 
 public class IntFunctionUseCase1 {
+	
+	private Integer calcValue=0;
 
 	public static void main(String[] args) {
 		// IntFunction Interface will always take primitive type as input parameter while
@@ -22,6 +24,15 @@ public class IntFunctionUseCase1 {
         // is already specified in Function name
         IntToDoubleFunction intDoub = i -> Math.sqrt(i);        
         System.out.println(intDoub.applyAsDouble(6));
+        
+//        IntFunction<Integer> calcAge = (age) -> {
+//        	calcValue = age + 10;
+//        	return calcValue;
+//        };
+        TempCalc tempCalc = new TempCalc();
+        System.out.println(tempCalc.calculateAgeTax(90));
+        
+        
 	}
 
 }

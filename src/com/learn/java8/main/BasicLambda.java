@@ -1,5 +1,8 @@
 package com.learn.java8.main;
 
+import java.util.Locale;
+import java.util.UUID;
+
 public class BasicLambda {
 	public static void main(String[] args) {
 //   What is a Lambda Function: No Access Modifier, No Return Type, No Method Name
@@ -32,6 +35,23 @@ public class BasicLambda {
 //		type is not required
 		DemoFunctionalInterfStringLength demoFiStrlen = s -> s.length();
 		System.out.println("String length is: " + demoFiStrlen.getLength("Abhijeet Kulshreshtha")); 
+		
+		String weekdays = "PT00H00M00S";
+        weekdays = weekdays.substring(2, 4);
+        System.out.println("Test " + weekdays);
+        
+        DemoMultipl multiplication = (a, b) -> a * b;
+        System.out.println(multiplication.multiply(2, 3));
+        
+        DemoOperations dmo = (a, b) -> (a + b);
+        System.out.println(dmo.add(56, 3));
+        
+        String uuid = UUID.randomUUID().toString();
+        System.out.println(uuid);
+        
+        String langu = "en_GB";
+        Locale forLangLocale = Locale.forLanguageTag(langu);
+        System.out.println(Locale.ENGLISH);
 	}
 }
 
@@ -48,4 +68,14 @@ interface DemoFunctionalInterfAdd {
 @FunctionalInterface
 interface DemoFunctionalInterfStringLength {
 	public int getLength(String s);
+}
+
+@FunctionalInterface
+interface DemoMultipl {
+	public int multiply(int a, int b);
+}
+
+@FunctionalInterface
+interface DemoOperations{
+	public int add(int a, int b);
 }

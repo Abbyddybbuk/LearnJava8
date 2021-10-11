@@ -23,6 +23,10 @@ public class ConsumerUseCase2 {
 		
 		// Print Movie List
 		consumer.accept(movieList);
+		
+		TempConsumer tmp = new TempConsumer();
+		System.out.println(tmp.calculateAgeTax(45));
+		
 
 	}
 

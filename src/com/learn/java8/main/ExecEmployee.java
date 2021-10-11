@@ -15,9 +15,13 @@ public class ExecEmployee {
 		emplist.add(new Employee(300, "Somesh"));
 		emplist.add(new Employee(43, "Ramesh"));
 		emplist.add(new Employee(67, "Raksha"));
-        System.out.println("Before Sorting: " + emplist);
+		
+		//Synchronized List
+		List<Employee> synEmpList = Collections.synchronizedList(emplist);
+		
+        System.out.println("Before Sorting: " + synEmpList);
 		Collections.sort(emplist, (e1, e2) -> (e1.empNo < e2.empNo) ? -1 : (e1.empNo > e2.empNo) ? 1 : 0);
-		System.out.println("After Sorting: " + emplist);
+		System.out.println("After Sorting: " + synEmpList);
 	}
 
 }

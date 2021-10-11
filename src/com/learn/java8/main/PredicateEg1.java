@@ -23,7 +23,7 @@ public class PredicateEg1 {
         System.out.println("************Predicate Example**********");
         
         Predicate<Integer> pEg1 = val1->val1 > 100;
-        System.out.println(pEg1.test(10));
+        System.out.println(pEg1.test(99));
         System.out.println(pEg1.test(101));
 	}
 

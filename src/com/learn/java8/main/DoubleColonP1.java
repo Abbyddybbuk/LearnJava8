@@ -18,7 +18,6 @@ public class DoubleColonP1 {
 		// With double colon operator
 		MyTestInterf22 myName2 = DoubleColonP1::callMyUpdatedName;
 		String name1 = myName2.callMyName("Abhijeet ");
-		
 		System.out.println(name1);
 
 	}

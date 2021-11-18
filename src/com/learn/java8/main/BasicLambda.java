@@ -1,5 +1,6 @@
 package com.learn.java8.main;
 
+import java.time.LocalDate;
 import java.util.Locale;
 import java.util.UUID;
 
@@ -24,6 +25,7 @@ public class BasicLambda {
 		
 		DemoFunctionalInterf demoFi1 = () -> System.out.println("Call to basicLambdaCallDemo 222");
 		demoFi1.basicLambdaCallDemo();
+		demoFi1.show();
 		
 //      Here the implementation of interface DemoFunctionalInterfAdd does not require type to be 
 //		declared for importing parameters; compiler take the reference from interface for Type declaration
@@ -52,12 +54,21 @@ public class BasicLambda {
         String langu = "en_GB";
         Locale forLangLocale = Locale.forLanguageTag(langu);
         System.out.println(Locale.ENGLISH);
+        
+//        LocalDate maxDeleteTime = LocalDate.MIN;
+//        System.out.println(maxDeleteTime);
 	}
 }
 
 @FunctionalInterface
 interface DemoFunctionalInterf {
 	public void basicLambdaCallDemo();
+	
+    // default method
+    default void show()
+    {
+      System.out.println("Default Method Executed");
+    }
 }
 
 @FunctionalInterface

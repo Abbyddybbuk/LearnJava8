@@ -17,7 +17,15 @@ public class BinaryOpUseCase1 {
 		// DoubleBinaryOperator interfaces for Double Values
 		IntBinaryOperator inBin = (val1, val2) -> val1 + val2;		
 		System.out.println("Sum is: " + inBin.applyAsInt(20, 30));
-
-	}
+        
+		String abc = "EFG";
+		String abc1 = new String("EFG");
+        
+		if (abc==abc1) {
+			System.out.println("EQUAL");
+		} else {
+			System.out.println("NOT EQUAL");
+		}
+ 	}
 
 }

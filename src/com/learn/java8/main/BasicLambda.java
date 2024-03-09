@@ -63,7 +63,7 @@ public class BasicLambda {
 @FunctionalInterface
 interface DemoFunctionalInterf {
 	public void basicLambdaCallDemo();
-	
+
     // default method
     default void show()
     {
